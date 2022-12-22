@@ -1,0 +1,64 @@
+#!/usr/bin/python
+# Copyright 2010  Lars Wirzenius
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+'''Profile updating of a value, when there are many unrelated widgets.'''
+
+
+import cProfile
+
+import ttystatus
+
+
+class FakeTTY(object):
+
+    def open_tty(self):
+        pass
+
+    def has_capabilities(self):
+        return True
+
+    def get_up_sequence(self):
+        return ''
+
+    def get_down_sequence(self):
+        return ''
+
+    def get_erase_line_sequence(self):
+        return ''
+
+    def get_width(self):
+        return 80
+
+    def write(self, raw_data):
+        pass
+        
+        
+tty = FakeTTY()
+ts = ttystatus.TerminalStatus(_terminal=tty, period=0)
+ts.format(
+    '%ElapsedTime() %Counter(current-file) files found; '
+    '%ByteSize(uploaded-bytes) uploaded %Pathname(current-dir)')
+ts['uploaded-bytes'] = 0
+ts.disable()
+
+num_updates = 1000*1000
+
+def loop():
+    for i in xrange(num_updates):
+        ts['updated-bytes'] = i
+
+cProfile.run('loop()', 'ttystatus.prof')

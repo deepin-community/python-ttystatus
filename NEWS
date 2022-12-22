@@ -1,0 +1,244 @@
+NEWS file for ttystatus
+=======================
+
+Version 0.38, released 2017-12-04
+----------------------------------
+
+* Add `Speed` widget to count change speed.
+
+Version 0.37, released 2017-11-11
+----------------------------------
+
+
+Version 0.36, released 2017-11-10
+----------------------------------
+
+* The sphinx formatted manual is dropped. It was too much of a bother
+  to maintain, sorry. Also, out of date.
+
+* `ttystatus` is not ported to Python 3.
+
+Version 0.35, released 2017-06-03
+----------------------------------
+
+* Add new method TerminalStatus.hide.
+
+Version 0.34, released 2016-12-26
+---------------------------------
+
+* Require Python 2.7.
+* Add a missing empty line needed for PEP8 compliance. This caused a
+  failure in the test suite, no idea why it wasn't caught when making
+  the previous release.
+
+Version 0.32, released 2016-01-09
+---------------------------------
+
+* Fix some variable type changes found by pylint.
+
+Version 0.31, released 2016-01-09
+---------------------------------
+
+* Fix bug in how areas on the terminal are erased. This exhibited
+  itself by the `TerminalStatus.notify` method not removing an
+  existing status message before writing out the notification.
+
+* Fix bug in `TerminalStatus.flush` that meant it did not, in fact,
+  flush the output.
+
+Version 0.30, released 2015-10-17
+---------------------------------
+
+* Strip ASCII control characters from displayed output (but expand
+  TABs) in widget values. This avoids TABs making values longer than
+  expected, and terminals getting confused by control sequences.
+
+* New method `ttystatus.TerminalStatus.get_terminal_size` returns
+  terminal width and height.
+
+* Speed up updates by not updating widgets if they aren't interested
+  in the variable that got changed. This only works for widgets added
+  with the `format` method, but that should be all of them for anyone
+  not liking verbose, tedious code.
+
+Version 0.29, released 2015-10-10
+---------------------------------
+
+* Do not write a newline to terminal when `finish()` is called, if
+  there is not output to the terminal otherwise. The point of the
+  newline is to make sure the shell prompt starts at the beginning of
+  a new line.
+
+Version 0.28, released 2015-10-10
+---------------------------------
+
+* Fix another case where terminal capabilities are queried and the
+  terminal isn't capable.
+
+Version 0.27, released 2015-10-10
+---------------------------------
+
+* Improve speed when progress output is disabled, by avoiding
+  pointless rendering.
+
+Version 0.26, released 2015-10-06
+---------------------------------
+
+* Fix looking up of capabilities when there is not terminal. Reported
+  by Sharon Kimble.
+
+Version 0.25, released 2015-10-05
+---------------------------------
+
+* Fix handling of a terminal without the necessary capabilities, by
+  disabling output.
+
+Version 0.24.1, released 2015-10-01
+---------------------------------
+
+* Fix handling the case of the process not having a terminal to talk
+  to. Reported by Juergen Nickelsen.
+
+Version 0.24, released 2015-09-30
+---------------------------------
+
+* Output can now be on multiple lines. Add newlines to format string.
+
+Version 0.23, released 2013-06-19
+---------------------------------
+
+* No longer use the SIGWINCH handler, since that causes problems when
+  applications do certain kinds of I/O and the signal interrupts it.
+  Libraries shouldn't install signal handlers like this. Instead,
+  query the terminal width whenever making updates.
+
+Version 0.22, released 2013-03-12
+---------------------------------
+
+* When the terminal size changes, ttystatus will now update the display
+  at once.
+
+Version 0.21, released 2012-09-29
+-----------------------------------
+
+* Updated README with information about where the output goes, and that
+  it is restricted to one line.
+
+Version 0.20, released 2012-09-23
+---------------------------------
+
+* `TerminalStatus.error` now always outputs. Error messages are too valuable
+  to lose.
+
+Version 0.19, released 2012-06-30
+---------------------------------
+
+* Added a `TerminalStatus.flush` method, to allow forcing an update.
+
+Version 0.18, released 2012-05-08
+---------------------------------
+
+* `ByteSpeed` can now show average speed over a short period of time
+  (which approximates current speed), instead of over the whole duration 
+  of the program.
+
+Version 0.17, released 2012-04-15
+---------------------------------
+
+* Committed genocide towards whole civilizations of rendering problems.
+
+Version 0.16, released 2012-04-08
+---------------------------------
+
+* Speed up by avoiding to format widgets until it's time to update.
+
+Version 0.15, released 2011-09-17
+---------------------------------
+
+* Bugfix: the String widget now handles non-string values.
+
+Version 0.14, released 2011-08-31
+---------------------------------
+
+* Notifications are written to the standard output, not the terminal.
+* A method for printing error messages is provided. They are printed to
+  the standard error.
+* The `PercentDone` class handles zero total amounts better now.
+* Widgets may now be added using a simple format string. See
+  `ttystatus.TerminalStatus.format` method.
+
+Version 0.13, released 2011-08-18
+---------------------------------
+
+* No upstream changes, but released with a new upstream version so that
+  Debian packaging does not need to get convoluted.
+
+Version 0.12, released 2011-07-24
+---------------------------------
+
+* API documentation is now done with Sphinx.
+* The SIGWINCH signal is now marked as a re-starting one, so that socket I/O
+  is not interrupted when an application uses ttystatus and the terminal is
+  resized.
+
+Version 0.11, released 2011-04-23
+---------------------------------
+
+* `pydoc ttystatus` now works better: you no longer need to access 
+  modules to see the exported classes. Instead, see all of them directly.
+* A final newline is no longer written out if there has been no output
+  otherwise.
+
+
+Version 0.10, released 2011-03-23
+---------------------------------
+
+* Fix handling of /dev/tty not being avilable. This can happen, e.g., when
+  things are run from cron.
+
+
+Version 0.9, released 2011-02-13
+--------------------------------
+
+* Add ttystatus.Integer.
+
+
+Version 0.8.1, released 2011-01-30
+--------------------------------
+
+* Do not write notifications if output is disabled.
+
+
+Version 0.8, released 2011-01-30
+--------------------------------
+
+* Write status output to /dev/tty by default.
+
+
+Version 0.7, released 2010-10-09
+--------------------------------
+
+* Fix bug that failed to show the last few updates when .finish() was called.
+
+
+Version 0.6, released 2010-07-13
+--------------------------------
+
+* Add ByteSpeed widget.
+
+
+Version 0.5, released 2010-07-07
+--------------------------------
+
+* Speed optimization: widgets are now only updated when the values they're
+  interested are updated, and widgets are now only formatted when the result
+  is actually going to be printed. For long-running processes with 
+  frequent updates, this saves a lot of unnecessary computation.
+* Debian packaging fix: Add Python-Version headers.
+
+
+Version 0.4, released 2010-07-05
+--------------------------------
+
+* Bugfix: when the output won't fit, and the last widget is a `Pathname`,
+  the last character is no longer chopped off.

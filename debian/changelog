@@ -1,0 +1,289 @@
+python-ttystatus (0.38-4) unstable; urgency=medium
+
+  * QA upload.
+  * Switch to pylint from pylint3
+  * Bump std-version to 4.1.1 and compat level to 12
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sat, 30 Nov 2019 15:21:00 +0100
+
+python-ttystatus (0.38-3) unstable; urgency=medium
+
+  * QA upload.
+  * Drop Python 2 support (Closes: #938230).
+  * Add dh-python to B-D.
+  * d/copyright: Change Format URL to correct one.
+  * Use debhelper-compat instead of debian/compat.
+  * d/changelog: Remove trailing whitespaces.
+  * d/control: Remove trailing whitespaces.
+  * Enable autopkgtest-pkg-python testsuite.
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 27 Nov 2019 11:36:59 +0100
+
+python-ttystatus (0.38-2) unstable; urgency=medium
+
+  * Orphan package. I'm retiring.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sun, 18 Nov 2018 18:27:45 +0200
+
+python-ttystatus (0.38-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Mon, 04 Dec 2017 18:27:18 +0200
+
+python-ttystatus (0.37-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Fix debian/rules.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 11 Nov 2017 10:30:11 +0100
+
+python-ttystatus (0.36-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Added Python3 support, and a python3-ttystatus package.
+
+ -- Lars Wirzenius <liw@liw.fi>  Fri, 10 Nov 2017 23:03:52 +0100
+
+python-ttystatus (0.35-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 03 Jun 2017 22:42:27 +0300
+
+python-ttystatus (0.34-1) unstable; urgency=medium
+
+  * New upstream version.
+    - Fixes FTBFS (Closes: #844235)
+  * debian/control: Require Python 2.7.
+
+ -- Lars Wirzenius <liw@liw.fi>  Mon, 26 Dec 2016 10:39:34 +0200
+
+python-ttystatus (0.32-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 09 Jan 2016 11:55:02 +0200
+
+python-ttystatus (0.31-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 09 Jan 2016 11:42:55 +0200
+
+python-ttystatus (0.30-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 17 Oct 2015 19:04:52 +0300
+
+python-ttystatus (0.29-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sun, 11 Oct 2015 19:08:24 +0300
+
+python-ttystatus (0.28-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 10 Oct 2015 16:18:36 +0300
+
+python-ttystatus (0.27-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 10 Oct 2015 12:04:59 +0300
+
+python-ttystatus (0.26-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Tue, 06 Oct 2015 12:29:11 +0300
+
+python-ttystatus (0.25-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Mon, 05 Oct 2015 22:37:01 +0300
+
+python-ttystatus (0.24.1-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Thu, 01 Oct 2015 19:23:22 +0300
+
+python-ttystatus (0.24-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control: Make long description longer, more useful.
+  * debian/control: Move Homepage: to source stanza.
+  * debian/control: Update Standards-Version to 3.9.5. No further
+    changes required.
+  * Add build-dependency on pep8 and pylint.
+
+ -- Lars Wirzenius <liw@liw.fi>  Wed, 30 Sep 2015 10:14:35 +0300
+
+python-ttystatus (0.23-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Wed, 19 Jun 2013 21:26:14 +0100
+
+python-ttystatus (0.22-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Tue, 12 Mar 2013 20:38:25 +0000
+
+python-ttystatus (0.21-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 29 Sep 2012 09:25:42 +0100
+
+python-ttystatus (0.20-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Tue, 18 Sep 2012 20:41:55 +0100
+
+python-ttystatus (0.19-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 30 Jun 2012 16:51:34 +0100
+
+python-ttystatus (0.18-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Tue, 08 May 2012 23:15:55 +0100
+
+python-ttystatus (0.17-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sun, 15 Apr 2012 19:39:31 +0100
+
+python-ttystatus (0.16-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/control: Bumped Standards-Version. No other changes needed.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sun, 08 Apr 2012 09:49:48 +0100
+
+python-ttystatus (0.15-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 17 Sep 2011 19:58:35 +0100
+
+python-ttystatus (0.14-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Wed, 31 Aug 2011 18:59:10 +0100
+
+python-ttystatus (0.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * First upload to Debian. (Closes: #636443)
+  * Debian packaging changed to be a non-native package.
+  * debian/rules and debian/control changed to use dh_python2.
+  * debian/copyright converted to use DEP5.
+
+ -- Lars Wirzenius <liw@liw.fi>  Wed, 03 Aug 2011 08:09:57 +0100
+
+python-ttystatus (0.12) squeeze; urgency=low
+
+  * New upstream release.
+  * debian/control: Add build dependency on python-sphinx.
+  * debian/pycompat: Useless, so removed.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sun, 24 Jul 2011 10:52:05 +0100
+
+python-ttystatus (0.11) squeeze; urgency=low
+
+  * New upstream version.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 23 Apr 2011 18:53:27 +0100
+
+python-ttystatus (0.10) squeeze; urgency=low
+
+  * New upstream release.
+
+ -- Lars Wirzenius <liw@liw.fi>  Wed, 23 Mar 2011 21:05:27 +0000
+
+python-ttystatus (0.9) squeeze; urgency=low
+
+  * New upstream release.
+    - add ttystatus.Integer
+
+ -- Lars Wirzenius <liw@liw.fi>  Sun, 13 Feb 2011 09:17:36 +0000
+
+python-ttystatus (0.8.1) squeeze; urgency=low
+
+  * New upstream release.
+    - don't write notifications is output is disabled
+
+ -- Lars Wirzenius <liw@liw.fi>  Sun, 30 Jan 2011 19:58:22 +0000
+
+python-ttystatus (0.8) squeeze; urgency=low
+
+  * New upstream release.
+    - write to /dev/tty by default
+
+ -- Lars Wirzenius <liw@liw.fi>  Sun, 30 Jan 2011 19:23:28 +0000
+
+python-ttystatus (0.7) squeeze; urgency=low
+
+  * New upstream version. Bugfix.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 09 Oct 2010 20:56:25 +0100
+
+python-ttystatus (0.6) squeeze; urgency=low
+
+  * New release.
+    - add ByteSpeed widget.
+  * debian/control: Add build-dependency on python-coverage-test-runner.
+
+ -- Lars Wirzenius <liw@liw.fi>  Tue, 13 Jul 2010 07:51:43 +1200
+
+python-ttystatus (0.5) squeeze; urgency=low
+
+  * New release.
+  * debian/control: Add Python-Version headers.
+
+ -- Lars Wirzenius <liw@liw.fi>  Wed, 07 Jul 2010 09:41:27 +1200
+
+python-ttystatus (0.4) squeeze; urgency=low
+
+  * New release.
+    - Bugfix: when the output won't fit, and the last widget is a `Pathname`,
+      the last character is no longer chopped off.
+
+ -- Lars Wirzenius <liw@liw.fi>  Mon, 05 Jul 2010 16:47:23 +1200
+
+python-ttystatus (0.3) squeeze; urgency=low
+
+  * New release.
+  * Fix bug in ttystatus.Pathname widget: if value is not set in master,
+    but update is called, do not crash.
+  * Fix handling of bad values for fields.
+
+ -- Lars Wirzenius <liw@liw.fi>  Thu, 01 Jul 2010 09:09:07 +1200
+
+python-ttystatus (0.2) squeeze; urgency=low
+
+  * New release.
+  * Many new widgets.
+
+ -- Lars Wirzenius <liw@liw.fi>  Mon, 14 Jun 2010 14:56:26 +1200
+
+python-ttystatus (0.1) squeeze; urgency=low
+
+  * Initial packaging. This is not intended to be uploaded to Debian, so
+    no closing of an ITP bug.
+
+ -- Lars Wirzenius <liw@liw.fi>  Sat, 08 May 2010 11:10:24 +1200
